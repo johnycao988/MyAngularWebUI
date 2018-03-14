@@ -21,8 +21,7 @@ spec:
         
       containers:
         - image: docker.registry.cscloud.com/angulardemo
-          name: angular-demo
-          imagePullPolicy: Always   
+          name: angular-demo 
           ports:
             - containerPort: 4200 
        
