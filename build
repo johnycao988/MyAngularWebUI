@@ -9,6 +9,8 @@
 
 git pull
 
+## ng build --prod
+
 docker build -t docker.registry.cscloud.com/angulardemo .
 
 docker push docker.registry.cscloud.com/angulardemo

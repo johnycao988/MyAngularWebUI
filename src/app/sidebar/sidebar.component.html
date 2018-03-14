@@ -1,0 +1,20 @@
+
+<div class="sidebar-wrapper">
+    <div class="logo">
+        <a href="https://www.creative-tim.com" class="simple-text">
+            <span class="logo-img">
+                <img src="../../assets/img/angular2-logo.png" alt="">
+            </span>
+            <b *ngIf="isTest()">{{topMenuTitle}}</b>
+        </a>
+    </div>
+    <ul class="nav">
+ 
+        <li *ngFor="let menuItem of menuItems" routerLinkActive="active" class="{{menuItem.class}}" (click)="menuItemClick(menuItem.url)">
+            <a [routerLink]="[menuItem.path]">
+                <i class="{{menuItem.icon}}"></i>
+                <span>{{menuItem.title}}</span>
+            </a>
+        </li>
+    </ul>
+</div>

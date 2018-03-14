@@ -1,25 +1,49 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { RouterModule } from '@angular/router';
-import { APP_ROUTES } from './app.router';
 
-import { RootComponent } from './root';
-import { CNPeopelViewComponent, CNPeopelService } from './chinese';
-import { HeroViewComponent, HeroService } from './heroes';
+import { AppComponent } from './app.component';
+import { AppRoutes } from './app.routing';
+import { SidebarModule } from './sidebar/sidebar.module';
+import { FooterModule } from './shared/footer/footer.module';
+import { NavbarModule} from './shared/navbar/navbar.module';
+import { FixedPluginModule} from './shared/fixedplugin/fixedplugin.module';
+import { NguiMapModule} from '@ngui/map';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UserComponent } from './user/user.component';
+import { TableComponent } from './table/table.component';
+import { TypographyComponent } from './typography/typography.component';
+import { IconsComponent } from './icons/icons.component';
+import { MapsComponent } from './maps/maps.component';
+import { NotificationsComponent } from './notifications/notifications.component';
+import { UpgradeComponent } from './upgrade/upgrade.component';
+import { MenuitemComponent } from './menuitem/menuitem.component';
+import { MenuitemService } from './menuitem/menuitem.service';
 
 @NgModule({
   declarations: [
-    RootComponent,
-    HeroViewComponent,
-    CNPeopelViewComponent
+    AppComponent,
+    DashboardComponent,
+    UserComponent,
+    TableComponent,
+    TypographyComponent,
+    IconsComponent,
+    MapsComponent,
+    NotificationsComponent,
+    UpgradeComponent,
+    MenuitemComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(APP_ROUTES),
-    FormsModule // <-- import the FormsModule before binding with [(ngModel)]
+    RouterModule.forRoot(AppRoutes),
+    SidebarModule,
+    NavbarModule,
+    FooterModule,
+    FixedPluginModule,
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'})
+
   ],
-  providers: [HeroService, CNPeopelService],
-  bootstrap: [RootComponent]
+  providers: [MenuitemService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
