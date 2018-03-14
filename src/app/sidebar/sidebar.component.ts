@@ -20,8 +20,8 @@ export const ROUTES: RouteInfo[] = [
   {path: 'icons', title: 'Icons', icon: 'ti-pencil-alt2', url: '', class: ''},
   {path: 'maps', title: 'Maps', icon: 'ti-map', url: '', class: ''},
   {path: 'notifications', title: 'Notifications', icon: 'ti-bell', url: '', class: ''},
-  {path: 'menuitem', title: 'Baidu', icon: 'ti-export', url: 'https://www.baidu.com/', class: ''},
-  {path: 'menuitem', title: 'Sina', icon: 'ti-export', url: 'http://www.sina.com.cn/', class: ''},
+  {path: 'baidu', title: 'Baidu', icon: 'ti-export', url: 'https://www.baidu.com/', class: ''},
+  {path: 'sina', title: 'Sina', icon: 'ti-export', url: 'http://www.sina.com.cn/', class: ''},
   {path: 'upgrade', title: 'Upgrade to PRO', icon: 'ti-export', url: '', class: 'active-pro'}
 ];
 

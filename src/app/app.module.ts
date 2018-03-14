@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
 import { SidebarModule } from './sidebar/sidebar.module';
@@ -19,6 +18,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { UpgradeComponent } from './upgrade/upgrade.component';
 import { MenuitemComponent } from './menuitem/menuitem.component';
 import { MenuitemService } from './menuitem/menuitem.service';
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,7 @@ import { MenuitemService } from './menuitem/menuitem.service';
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'})
 
   ],
-  providers: [MenuitemService],
+  providers: [MenuitemService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

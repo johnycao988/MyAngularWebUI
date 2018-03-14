@@ -48,7 +48,11 @@ export const AppRoutes: Routes = [
         component: UpgradeComponent
     },
     {
-        path: 'menuitem',
+        path: 'baidu',
+        component: MenuitemComponent
+    },
+      {
+        path: 'sina',
         component: MenuitemComponent
     }
   ]
