@@ -10,7 +10,7 @@
     </div>
     <ul class="nav">
  
-        <li *ngFor="let menuItem of menuItems" routerLinkActive="active" class="{{menuItem.class}}" (click)="menuItemClick(menuItem.url)">
+        <li *ngFor="let menuItem of menuItems" routerLinkActive="active" class="{{menuItem.class}}" (click)="menuItemClick(menuItem)">
             <a [routerLink]="[menuItem.path]">
                 <i class="{{menuItem.icon}}"></i>
                 <span>{{menuItem.title}}</span>
