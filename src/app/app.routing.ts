@@ -54,6 +54,14 @@ export const AppRoutes: Routes = [
       {
         path: 'sina',
         component: MenuitemComponent
+    },
+      {
+        path: 'k8s-icon',
+        component: MenuitemComponent
+    },
+      {
+        path: 'k8s-user',
+        component: MenuitemComponent
     }
   ]
 

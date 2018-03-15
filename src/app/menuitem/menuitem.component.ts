@@ -20,9 +20,8 @@ export class MenuitemComponent implements OnInit {
   }
 
   getMenuitemUrl() {
-    console.log(this.miService.getSelectedItemUrl());
-    const url = this.sanitizer.bypassSecurityTrustResourceUrl(this.miService.getSelectedItemUrl());
-    console.log(url);
+
+    const url = this.sanitizer.bypassSecurityTrustResourceUrl(this.miService.getSelectedItemUrl() + '?isRemoteReq=true');
     return url;
   }
 

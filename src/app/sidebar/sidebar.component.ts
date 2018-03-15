@@ -22,6 +22,8 @@ export const ROUTES: RouteInfo[] = [
   {path: 'notifications', title: 'Notifications', icon: 'ti-bell', url: '', class: ''},
   {path: 'baidu', title: 'Baidu', icon: 'ti-export', url: 'https://www.baidu.com/', class: ''},
   {path: 'sina', title: 'Sina', icon: 'ti-export', url: 'http://www.sina.com.cn/', class: ''},
+  {path: 'k8s-icon', title: 'K8s Icon', icon: 'ti-export', url: 'http://angular.demo.cscloud.com/#/icons', class: ''},
+  {path: 'k8s-user', title: 'K8s User', icon: 'ti-export', url: 'http://angular.demo.cscloud.com/#/user', class: ''},
   {path: 'upgrade', title: 'Upgrade to PRO', icon: 'ti-export', url: '', class: 'active-pro'}
 ];
 
