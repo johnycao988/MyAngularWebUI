@@ -1,20 +1,33 @@
 
 <div class="sidebar-wrapper">
-    <div class="logo">
-        <a href="https://www.creative-tim.com" class="simple-text">
-            <span class="logo-img">
-                <img src="../../assets/img/angular2-logo.png" alt="">
-            </span>
-            <b *ngIf="isTest()">{{topMenuTitle}}</b>
-        </a>
-    </div>
-    <ul class="nav">
- 
-        <li *ngFor="let menuItem of menuItems" routerLinkActive="active" class="{{menuItem.class}}" (click)="menuItemClick(menuItem)">
-            <a [routerLink]="[menuItem.path]">
-                <i class="{{menuItem.icon}}"></i>
-                <span>{{menuItem.title}}</span>
-            </a>
-        </li>
-    </ul>
+	<div class="logo">
+		<a href="https://www.creative-tim.com" class="simple-text"> <span
+			class="logo-img"> <img
+				src="../../assets/img/angular2-logo.png" alt="">
+		</span> <b *ngIf="isTest()">{{topMenuTitle}}</b>
+		</a>
+	</div>
+
+	<ul class="nav">
+		<p *ngFor="let menuItem of menuItems">
+		<li routerLinkActive="active" class="{{menuItem.class}}"
+			(click)="menuItemClick(menuItem)"><a
+			[routerLink]="[menuItem.path]"> <i class="{{menuItem.icon}}"></i>
+				<span>{{menuItem.title}}</span>
+		</a></li>
+		</p>
+		<div class="nested-menu">
+			<a class="list-group-item" > <span><i
+					class="fa fa-plus"></i>&nbsp; aa</span>
+			</a>
+			<li class="nested">
+				<ul class="submenu">
+					<li><a href="javascript:void(0)"><span>bb</span></a></li>
+					<li><a href="javascript:void(0)"><span>cc</span></a></li>
+					<li><a href="javascript:void(0)"><span>dd</span></a></li>
+				</ul>
+			</li>
+		</div>
+	</ul>
 </div>
+

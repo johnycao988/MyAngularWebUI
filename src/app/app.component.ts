@@ -13,7 +13,10 @@ export class AppComponent implements OnInit {
 
   private isLocalRequest: boolean;
 
+
+
   ngOnInit() {
+
 
     const url = location.href;
 

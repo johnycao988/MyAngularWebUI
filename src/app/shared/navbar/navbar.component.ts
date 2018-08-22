@@ -31,20 +31,15 @@ export class NavbarComponent implements OnInit {
     this.toggleButton = navbar.getElementsByClassName('navbar-toggle')[0];
   }
   getTitle() {
-    //        var titlee = window.location.pathname;
-    //        titlee = titlee.substring(1);
-    //        for(var item = 0; item < this.listTitles.length; item++){
-    //            if(this.listTitles[item].path === titlee){
-    //                return this.listTitles[item].title;
-    //      }
-    //        }
+  
+  return 'Test';
 
-    let title = this.currRouteService.getTitle();
-
-    if (this.currRouteService.isRemotePageView() ) {
-      title = title + '[' + this.currRouteService.getUrl() + ']';
-    }
-    return title;
+//    let title = this.currRouteService.getTitle();
+//
+//    if (this.currRouteService.isRemotePageView() ) {
+//      title = title + ' - [' + this.currRouteService.getUrl() + ']';
+//    }
+//    return title;
   }
   sidebarToggle() {
     var toggleButton = this.toggleButton;
